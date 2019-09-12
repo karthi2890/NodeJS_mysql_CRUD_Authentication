@@ -7,4 +7,4 @@ set ttsApi_PrivateKey=mySecureKey
 
 //for mac:
 
-set ttsApi_PrivateKey=mySecureKey
+export ttsApi_PrivateKey=mySecureKey
