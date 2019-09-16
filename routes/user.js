@@ -42,11 +42,14 @@ router.post("/login", async function(req, res, next) {
       [req.body.username, req.body.password],
       function(error, results, fields) {
         if (error) throw error;
-        const Id = results[0][0].Id;
-        if (!Id) {
+        const username = results[0][0].username;
+        if (!username) {
           return res.status(401).send("Invalid username or passsword.");
         }
-        const token = jwt.sign({ id: Id }, config.get("jwtPrivateKey"));
+        const token = jwt.sign(
+          { username: username },
+          config.get("jwtPrivateKey")
+        );
         res.send({
           success: true,
           message: { username: req.body.username, token }
