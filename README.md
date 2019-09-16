@@ -8,3 +8,5 @@ set ttsApi_PrivateKey=mySecureKey
 //for mac:
 
 export ttsApi_PrivateKey=mySecureKey
+
+1. Readme.docx has the visual screen shot of the executions
